@@ -52,6 +52,12 @@ class _MyHomePageState extends State<MyHomePage> {
             TimeOfDay result = await showTimePicker(
               initialTime: TimeOfDay.now(),
               context: context,
+              builder: (BuildContext context, Widget child) {
+                return MediaQuery(
+                  data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: true),
+                  child: child,
+                );
+              },
             );
 
             if (result != null) {
