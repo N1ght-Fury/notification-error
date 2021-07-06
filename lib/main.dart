@@ -70,8 +70,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 schedule: NotificationCalendar(
                   repeats: true,
-                  hour: int.parse(result.format(context).split(':')[0]),
-                  minute: int.parse(result.format(context).split(':')[1]),
+                  hour: result.hour,
+                  minute: result.minute,
                   second: 0,
                 ),
               );
